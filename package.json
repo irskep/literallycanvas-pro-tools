@@ -1,0 +1,19 @@
+{
+  "name": "lc-pro-tools",
+  "version": "1.0.0",
+  "description": "Extra super-cool tools for Literally Canvas",
+  "main": "src/entry.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "~6.4.0",
+    "babel-preset-es2015": "~6.3.13",
+    "babel-preset-react": "~6.3.13",
+    "webpack": "^1.12.11",
+    "babel-loader": "^6.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steve Johnson",
+  "license": "Commercial (see LICENSE.md)"
+}
