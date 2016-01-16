@@ -1,0 +1,4 @@
+[submodule "literallycanvas"]
+	path = literallycanvas
+	url = git@github.com:literallycanvas/literallycanvas.git
+	branch = release
