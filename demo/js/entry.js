@@ -50,10 +50,14 @@ var AfterLC = React.createClass({
       })}
 
       <h1>Additional API</h1>
+      <h2><tt>LCProTools.tools.addToDefaultTools(LCNamespace)</tt></h2>
       <p>
-        <tt>LCProTools.tools.addToDefaultTools(LCNamespace)</tt>: Add the extra tools
-        to the list of default tools so you don’t need to do anything special
-        in <tt>LC.init()</tt>.
+        Add the extra tools to the list of default tools so you don’t need to
+        do anything special in <tt>LC.init()</tt>.
+      </p>
+      <p>
+        Takes the top-level <tt>LC</tt> namespace as an argument because future
+        versions of Literally Canvas will support CommonJS.
       </p>
     </div>;
   }

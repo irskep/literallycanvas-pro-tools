@@ -194,20 +194,35 @@
 	        'Additional API'
 	      ),
 	      React.createElement(
-	        'p',
+	        'h2',
 	        null,
 	        React.createElement(
 	          'tt',
 	          null,
 	          'LCProTools.tools.addToDefaultTools(LCNamespace)'
-	        ),
-	        ': Add the extra tools to the list of default tools so you don’t need to do anything special in ',
+	        )
+	      ),
+	      React.createElement(
+	        'p',
+	        null,
+	        'Add the extra tools to the list of default tools so you don’t need to do anything special in ',
 	        React.createElement(
 	          'tt',
 	          null,
 	          'LC.init()'
 	        ),
 	        '.'
+	      ),
+	      React.createElement(
+	        'p',
+	        null,
+	        'Takes the top-level ',
+	        React.createElement(
+	          'tt',
+	          null,
+	          'LC'
+	        ),
+	        ' namespace as an argument because future versions of Literally Canvas will support CommonJS.'
 	      )
 	    );
 	  }
