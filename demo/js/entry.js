@@ -5,10 +5,6 @@ const {tools} = require('../../lib/js/lc-pro-tools');
 
 tools.addToDefaultTools(LC);
 
-LC.init(
-  document.getElementById('lc-container'),
-  {imageURLPrefix: "/demo/img"});
-
 var BeforeLC = React.createClass({
   render() {
     return <div>
@@ -64,3 +60,7 @@ var AfterLC = React.createClass({
 
 React.render(<BeforeLC />, document.getElementById('before-lc'));
 React.render(<AfterLC />, document.getElementById('after-lc'));
+
+LC.init(
+  document.getElementById('lc-container'),
+  {imageURLPrefix: "demo/img"});

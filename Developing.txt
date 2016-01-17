@@ -1,0 +1,8 @@
+To run the demo on Readme.html:
+git submodule update --init
+
+To run the development environment:
+npm install -g webpack webpack-dev-server
+npm install --dev
+make readme
+open http://localhost:8080/Readme.html
