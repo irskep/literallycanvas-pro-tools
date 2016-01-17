@@ -1,7 +1,7 @@
 const React = require('react');
 const LC = require('literallycanvas');
 
-const {tools} = require('../../src');
+const {tools} = require('../../lib/js/lc-pro-tools');
 
 tools.addToDefaultTools(LC);
 

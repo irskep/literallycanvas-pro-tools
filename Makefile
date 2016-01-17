@@ -1,4 +1,4 @@
-.PHONY: demo watch serve readme copyimages
+.PHONY: demo watch serve readme copyimages lib
 
 copyimages:
 	cp literallycanvas/img/* demo/img/
@@ -14,3 +14,7 @@ watch:
 
 serve: copyimages
 	webpack-dev-server --progress --colors --watch --port 8080
+
+lib:
+		webpack --progress --colors --config webpack.config-lib.js
+		webpack --progress --colors --config webpack.config-lib-standalone.js

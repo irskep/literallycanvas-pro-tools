@@ -1,5 +1,3 @@
-const LC = require('literallycanvas');
-
 LC.defineShape('PointCollection', {
   constructor: function(args) {
     args = args || {};
