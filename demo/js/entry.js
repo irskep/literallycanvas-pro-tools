@@ -19,10 +19,14 @@ var BeforeLC = React.createClass({
         compatible with a release of the main library at most 30 days old.
         All new shapes work with both the canvas and SVG if possible.
       </p>
+      <p>
+        <b>The top-level API is not guaranteed to be stable.</b> But it is
+        simple.
+      </p>
       <h2>Using as a standalone file</h2>
       <p>
         Simply include <tt>lib/js/lc-pro-tools-standalone.js</tt> on your web
-        page. Then call <tt>LCProTools.addToDefaultTools(LC)</tt> or
+        page. Then call <tt>LCProTools.tools.addToDefaultTools(LC)</tt> or
         add <tt>[LCProTools.tools.Spraypaint</tt>, <tt>LCProTools.tools.PaintBucket]</tt> to
         the list of tools you pass to <tt>LC.init()</tt>.
       </p>
@@ -50,7 +54,7 @@ var AfterLC = React.createClass({
 
       <h1>Additional API</h1>
       <p>
-        <tt>LCProTools.addToDefaultTools(LCNamespace)</tt>: Add the extra tools
+        <tt>LCProTools.tools.addToDefaultTools(LCNamespace)</tt>: Add the extra tools
         to the list of default tools so you don’t need to do anything special
         in <tt>LC.init()</tt>.
       </p>
