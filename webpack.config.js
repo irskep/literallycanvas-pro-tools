@@ -1,10 +1,10 @@
 var path = require('path');
 
 module.exports = {
-  entry: "./demo_js/entry.js",
+  entry: "./demo/js/entry.js",
   output: {
       path: __dirname,
-      filename: "demo.js"
+      filename: "demo/demo.js"
   },
   externals: {
     "literallycanvas": "LC",
@@ -13,7 +13,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: [/\.js$/, /\.jsx$/],
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']

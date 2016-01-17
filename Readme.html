@@ -3,18 +3,25 @@
 <head>
   <title>Literally Canvas: Pro Tools</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/demo.css">
-  <link rel="stylesheet" href="literallycanvas/css/literallycanvas.css">
+  <link rel="stylesheet" href="/demo/css/normalize.css">
+  <link rel="stylesheet" href="/demo/css/demo.css">
+  <link rel="stylesheet" href="/literallycanvas/css/literallycanvas.css">
 </head>
 <body>
   <div id="container">
-    <div id="before-lc"></div>
+    <div id="before-lc">
+      <pre>git submodule update --init
+npm install -g webpack webpack-dev-server
+npm install --dev
+make readme
+open http://localhost:8080/Readme.html
+</pre>
+    </div>
     <div id="lc-container"></div>
     <div id="after-lc"></div>
   </div>
-  <script src="demo_js/react.js"></script>
-  <script src="literallycanvas/js/literallycanvas.js"></script>
-  <script src="demo.js"></script>
+  <script src="/demo/js/react.js"></script>
+  <script src="/literallycanvas/js/literallycanvas.js"></script>
+  <script src="/demo/demo.js"></script>
 </body>
 </html>
