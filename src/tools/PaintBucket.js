@@ -165,6 +165,11 @@ module.exports = class FillTool extends LC.tools.Tool {
       <p>
         The result is saved as an Image object.
       </p>
+      <p>
+        <b>If the image is unbounded, the paint bucket will ignore all pixels
+        outside the minimum bounding rect of all existing shapes.</b> So if
+        there are no shapes yet, it will do nothing.
+      </p>
     </div>
   }
 
