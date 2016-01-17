@@ -170,6 +170,17 @@
 	      'div',
 	      null,
 	      React.createElement(
+	        'div',
+	        null,
+	        '(If you don’t see images, try ',
+	        React.createElement(
+	          'tt',
+	          null,
+	          'make copyimages'
+	        ),
+	        '.)'
+	      ),
+	      React.createElement(
 	        'h1',
 	        null,
 	        'Tools'

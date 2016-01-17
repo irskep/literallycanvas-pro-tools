@@ -43,6 +43,7 @@ var BeforeLC = React.createClass({
 var AfterLC = React.createClass({
   render() {
     return <div>
+      <div>(If you don’t see images, try <tt>make copyimages</tt>.)</div>
       <h1>Tools</h1>
       {tools.allTools.map(function(T) {
         return new T().renderHelp();
