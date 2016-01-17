@@ -1,6 +1,7 @@
 .PHONY: demo watch serve readme copyimages lib
 
 copyimages:
+	mkdir -p demo/img
 	cp literallycanvas/img/* demo/img/
 	cp lib/img/* demo/img/
 
