@@ -83,6 +83,22 @@ LC.defineOptionsStyle('spraypaint-options', React.createClass({
 
 module.exports = class Spraypaint extends LC.tools.Tool {
 
+  renderHelp() {
+    return <div>
+      <h2>Spraypaint</h2>
+      <p>
+        While the mouse button is down, add single-pixel-large points within
+        X pixels of the cursor (determined by a slider) at a frequency of
+        Y pixels per second (also determined by a slider).
+      </p>
+      <p>
+        The result is saved as a <tt>PointCollection</tt> shape, which is
+        very efficient to render because it saves all the point as an image
+        once the mouse button is released.
+      </p>
+    </div>
+  }
+
   constructor(lc) {
     super(lc);
     this.name = 'PointCollection';

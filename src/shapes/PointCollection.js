@@ -51,9 +51,9 @@ LC.defineShape('PointCollection', {
 
   toJSON: function() { return {points: this.points, color: this.color}; },
   fromJSON: function(args) {
-    shape = LC.createShape('PointCollection', args);
+    const shape = LC.createShape('PointCollection', args);
     shape.bake();
-    shape;
+    return shape;
   }
 });
 

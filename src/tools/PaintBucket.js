@@ -142,7 +142,8 @@ LC.defineOptionsStyle('flood-fill-options', React.createClass({
         <label style={floatLeft} htmlFor="threshold">Threshold:</label>
         <div style={containerStyle}>
           <input id="threshold" type="range" min={0} max={MAX_THRESHOLD}
-            style={inputStyle} onChange={this.updateThreshold} value={this.state.threshold} />
+            style={inputStyle} onChange={this.updateThreshold}
+            value={this.state.threshold} />
           <div style={valueStyle}>{percent}%</div>
         </div>
       </div>
@@ -152,6 +153,20 @@ LC.defineOptionsStyle('flood-fill-options', React.createClass({
 
 
 module.exports = class FillTool extends LC.tools.Tool {
+
+  renderHelp() {
+    return <div>
+      <h2>Paint Bucket</h2>
+      <p>
+        Click on a pixel. While any neighboring pixel is at least X% similar
+        to the clicked pixel (as determined by the slider in the options
+        toolbar), a neighboring pixel is set to the background color.
+      </p>
+      <p>
+        The result is saved as an Image object.
+      </p>
+    </div>
+  }
 
   constructor(lc) {
     super(lc);
