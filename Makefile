@@ -21,6 +21,7 @@ lib:
 		webpack --progress --colors --config webpack.config-lib-standalone.js
 
 zip:
-	git clone . /tmp/literally-canvas-pro-tools
-	zip -r literally-canvas-pro-tools.zip /tmp/literally-canvas-pro-tools
-	rm -rf /tmp/literally-canvas-pro-tools
+	mkdir -p zip_dir
+	git clone . ./zip_dir/literally-canvas-pro-tools
+	cd zip_dir && zip -r ../literally-canvas-pro-tools.zip literally-canvas-pro-tools
+	rm -rf zip_dir
