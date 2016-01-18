@@ -1,4 +1,4 @@
-.PHONY: demo watch serve readme copyimages lib
+.PHONY: demo watch serve readme copyimages lib zip
 
 copyimages:
 	mkdir -p demo/img
@@ -19,3 +19,8 @@ serve: copyimages
 lib:
 		webpack --progress --colors --config webpack.config-lib.js
 		webpack --progress --colors --config webpack.config-lib-standalone.js
+
+zip:
+	git clone . /tmp/literally-canvas-pro-tools
+	zip -r literally-canvas-pro-tools.zip /tmp/literally-canvas-pro-tools
+	rm -rf /tmp/literally-canvas-pro-tools
