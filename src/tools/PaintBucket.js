@@ -180,6 +180,7 @@ module.exports = class FillTool extends LC.tools.Tool {
     this.optionsStyle = 'flood-fill-options';
     this.usesSimpleAPI = true;
     this.threshold = 20;
+    this.isInProgress = false
   }
 
   begin(x, y, lc) { }
@@ -187,6 +188,11 @@ module.exports = class FillTool extends LC.tools.Tool {
   continue(x, y, lc) { }
 
   end(x, y, lc) {
+    if (this.isInProgress) {
+      return;
+    }
+    this.isInProgress = true;
+
     const rect = getDefaultImageRect(lc);
 
     const startPoint = {x: Math.floor(x), y: Math.floor(y)};
@@ -212,6 +218,7 @@ module.exports = class FillTool extends LC.tools.Tool {
           lc.setShapesInProgress([]);
           lc.saveShape(shape);
           didFinish = true;
+          this.isInProgress = false;
         } else {
           lc.setShapesInProgress([shape]);
           lc.repaintLayer('main');
